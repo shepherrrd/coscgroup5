@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
 ?>
 
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 <head>
 	<meta charset="UTF-8">

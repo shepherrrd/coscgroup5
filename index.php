@@ -17,7 +17,7 @@ error_reporting(0);                                                             
 ?>
 
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 <head>
 	<meta charset="UTF-8">
