@@ -144,7 +144,7 @@ function processRating(val, attrVal){
 					<li class="current">
 						<a href="blog.php"><img src="images/holi-turkey.jpg" alt="Image"></a>
 						<div>
-							<h2><a href="blog.php">Holy Turkey</a></h2>
+							<h2><a href="recipes.php">Holy Turkey</a></h2>
 							<p>
 								Tuck wings under turkey
 								
@@ -154,14 +154,14 @@ function processRating(val, attrVal){
 					<li>
 						<a href="blog.php"><img src="images/fruits-and-bread.jpg" alt="Image"></a>
 						<div>
-							<h2><a href="blog.php">Fruits &amp; Bread</a></h2>
+							<h2><a href="recipes.php">Fruits &amp; Bread</a></h2>
 							<p>
 								Fresh Fruit Bread Recipe
 							</p>
 						</div>
 					</li>
 					<li>
-						<a href="blog.php"><img src="images/dessert.jpg" alt="Image"></a>
+						<a href="recipes.php"><img src="images/dessert.jpg" alt="Image"></a>
 						<div>
 							<h2><a href="blog.php">Dessert</a></h2>
 							<p>
