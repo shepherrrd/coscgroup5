@@ -6,7 +6,8 @@ $con = new PDO("mysql:host=localhost;dbname=cooking",'root','');
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `recipes` WHERE resname = '$str'");
+	$str2 = strtok($str, '');
+	$sth = $con->prepare("SELECT * FROM `recipes` WHERE substring_index(resname,' ',1) like '$str2' OR (resname like '$str2')");
 
 	$sth->setFetchMode(PDO:: FETCH_OBJ);
 	$sth -> execute();

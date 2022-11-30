@@ -27,7 +27,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>Saif Ali Akhtar <i class="caret"></i>
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i>Cosc333 <i class="caret"></i>
 
                                 </a>
                                 <ul class="dropdown-menu">
@@ -43,7 +43,7 @@
                         </ul>
                         <ul class="nav">
                             <li class="active">
-                                <a href="#">Dashboard</a>
+                                <a href="../index.php">Dashboard</a>
                             </li>
                           
                           

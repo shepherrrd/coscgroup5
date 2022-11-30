@@ -23,6 +23,8 @@ error_reporting(0);                                                             
 	<meta charset="UTF-8">
 	<title>Food &amp; Recipes Web Template</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="rating.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="rating.js"></script>
@@ -70,8 +72,9 @@ function processRating(val, attrVal){
 	<div  style="background-color:;margin:auto;min-height:20px;display:<?php echo $none;?>;">
 	<div  style="background-color:;margin-left:200px;width:950px;min-height:30px;">
 	<p style='float:left;color:#449c3a;margin-left:10px;font-size:20px;'>You successfully login!</p>
-		<p style='float:right;color:#fff;margin-left:px;font-size:20px;'>Welcome:<span style='margin-right:0px;display:inline-block;margin-right:5px;'><?php echo $name ?></span>
+		<p style='float:right;color:#fff;margin-left:px;font-size:20px;'>Welcome: <span style='margin-right:0px;display:inline-block;margin-right:5px;'><?php echo $name ?></span>
 			<image src='images/user.png'  style='display:inline-block;height:20px;width:20px;margin-top:5px;margin-right:5px;'/>
+			
 	</div>	
 	</div>
 	
@@ -113,12 +116,17 @@ function processRating(val, attrVal){
 									
 									
 									
-									$logout= '<form action="login.php" method="post" >
-									<input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000;border:none;padding:5px;font-size:15px;"  ></form>';
+									$logout= '<form action="logout.php" method="post" >
+									
+									 <i class="fa fa-sign-out" style="font-size:24px"></i><input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000;border:none;padding:5px;font-size:15px;"  >
+									
+									
+									</form>';
+									
 							}
 
 						?>
-				<
+				
 				</ul>
 				
 			</div>
@@ -227,14 +235,10 @@ function processRating(val, attrVal){
 				<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
 				 
 			</div>
-			<div style="display:<?php echo $none;?>;">
-				<h3>Settings</h3>
-				<a href="#"  ><?php echo $logout;?></a>
-				
-				 
-			</div>
+			
 		</div>
 	</div>-->
+	
 	<div class="footer">
 		<div>
 		
@@ -242,6 +246,13 @@ function processRating(val, attrVal){
 				&copy;(Cosc333 Group 5) Copyright 2022. All rights reserved
 			</p>
 		</div>
+		<div style="display:<?php echo $none;?>;">
+				<h3></h3>
+				<a href="index.php" ><?php echo $logout;?></a>
+				
+				
+				 
+			</div>
 	</div>
 </body>
 </html>
