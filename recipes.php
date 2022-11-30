@@ -40,6 +40,7 @@ error_reporting(0);                                                             
 					<li class="current">
 						<a href="recipes.php"> Recipes</a>
 					</li>
+					<li><a href="admin/index.php">Admin</a></li>
 					<!--<li>
 						<a href="featured.php">Recipe of Month</a>
 					</li>

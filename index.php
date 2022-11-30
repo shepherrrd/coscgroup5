@@ -94,6 +94,9 @@ function processRating(val, attrVal){
 					<li>
 						<a href="recipes.php">Recipes</a>
 					</li>
+					<li>
+						<a href="admin/index.php">Admin</a>
+					</li>
 
 					
 						
