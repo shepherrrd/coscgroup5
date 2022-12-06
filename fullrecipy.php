@@ -30,8 +30,8 @@ $row=mysqli_fetch_array($resul);
 	$ing_text =   $row['ing_text'];
 	$rid = 		  $row['rid'];
 	$disc = 		  $row['disc'];
-
-
+ 
+ 
 
 ?>
 

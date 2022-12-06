@@ -23,6 +23,15 @@ input[type="text"]{
 	padding: 0 25px;
 	border-radius: 25px 0 0 25px;
 }
+.emailtext{
+	background: #fff;
+	width: 500px;
+	height: 50px;
+	border: none;
+	outline: none;
+	padding: 0 25px;
+	border-radius: 25px 0 0 25px;
+}
 input[type="submit"]{
 	position: relative;
 	left: -5px;

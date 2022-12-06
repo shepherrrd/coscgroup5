@@ -9,14 +9,40 @@ if(isset($_POST['submit']))
 	$email=$_POST['email'];	
 	$password=$_POST['password'];
 			
+			if (empty($fname)  || empty($lname) || empty($email) ||empty($password) 
+			) {
+				echo ' Input Cannot Be Empty ';
+				# code...
+			}else { $sql1="select * from signup where (email='$email');";
+
+				$res=mysqli_query($db,$sql1);
+		  
+				if (mysqli_num_rows($res) > 0) {
+				  
+				  $row = mysqli_fetch_assoc($res);
+				  if($email==isset($row['email']))
+				  {
+						  echo "email already exists";
+				  }
+				  if($username==isset($row['username']))
+				  {
+					  echo "username  already exists";
+				  }
+				  }
+		  else{
+			$sql = "INSERT INTO signup(firstname,lastname,email,password) VALUES('$fname','$lname','$email','$password')";
+			$query=mysqli_query($db, $sql);
+		   if($query)
+		   {
+			   header('location:signup_success.php');
+		   }
+		   
+				   }
+		  //do your insert code here or do something (run your code)
+		  }
+		  
 			
 			
-	$sql = "INSERT INTO signup(firstname,lastname,email,password) VALUES('$fname','$lname','$email','$password')";
-	 $query=mysqli_query($db, $sql);
-	if($query)
-	{
-		header('location:signup_success.php');
-	}
 	
 	
 
@@ -32,6 +58,7 @@ if(isset($_POST['submit']))
 	<meta charset="UTF-8">
 	<title>signup</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -83,23 +110,33 @@ if(isset($_POST['submit']))
 					    <form action='' method='post'>
 					    	<div>
 						    	<span><label>FIRST-NAME</label></span>
-						    	<span><input type="text" value="" name='fname'></span>
+						    	<span><input @keydown.space.prevent type="text" id="fname" value="" name='fname' pattern="[A-Za-z0-9]+" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"></span>
 						    </div>
 							<div>
 						    	<span><label>LAST-NAME</label></span>
-						    	<span><input type="text" value="" name='lname'></span>
+						    	<span><input  @keydown.space.prevent type="text" value="" name='lname' pattern="[A-Za-z0-9]+" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"></span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
-						    	<span><input type="text" value="" name='email'></span>
+						    	<span><input @keydown.space.prevent type="email" class="emailtext" value="" name='email' pattern="[A-Za-z0-9]+" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"></span>
 						    </div>
 						    <div>
 						     	<span><label>PASSWORD</label></span>
-						    	<span><input type="text" value="" name='password'></span>
+						    	<span><input @keydown.space.prevent type="text" value="" name='password' pattern="[A-Za-z0-9]+" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"></span>
 						    </div>
-						    
+						    <script>
+							$('#submitbtn').attr('disabled', true);
+							document.getElementbyId('fname').addEventListner('keyup', e=>{
+								if (e.target.value == "") {
+									document.getElementbyId('submitbtn').disabled = true;
+							}else{
+								document.getElementbyId('submitbtn').disabled = false;
+							}
+							});
+							
+						</script>
 						   <div>
-						   		<span><input type="submit" name='submit' value="Submit"></span>
+						   		<span><input type="submit" id="submitbtn" name='submit' value="Submit" ></span>
 						  </div>
 					    </form>
 						
@@ -107,6 +144,7 @@ if(isset($_POST['submit']))
 				</div>
 			</div>
 		</div>
+		
 		<!--<div>
 			<div>
 				<h3>Cooking Video</h3>

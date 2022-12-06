@@ -24,14 +24,7 @@
 					<li>
 						<a href="recipes.php">Recipes</a>
 					</li>
-					<li>
-						<a href="featured.php">Featured Recipes</a>
-					</li>
 					
-					<li >
-						<a href="about.php">About</a>
-					</li>
-				
 					
 				</ul>
 			</div>
@@ -50,7 +43,7 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<!-- <div>
 			<div>
 				<h3>Cooking Video</h3>
 				<a href="videos.php"><img src="images/cooking-video.png" alt="Image"></a>
@@ -98,11 +91,11 @@
 				 
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="footer">
 		<div>
 			<p>
-				&copy;(Navbro) Copyright 2012. All rights reserved
+				&copy;(Cosc333) Copyright 2022. All rights reserved
 			</p>
 		</div>
 	</div>
