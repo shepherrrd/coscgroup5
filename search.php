@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
         		<!DOCTYPE html>
 <html>
 <head>
-	<title>Search Bar using PHP</title>
+	<title>Results For <?php echo($str) ?></title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     
@@ -110,6 +110,7 @@ if (isset($_POST["submit"])) {
 		else{
 			echo'
 			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<title> No results Found </title>
 			<div class="header">
 		<div>
 			<a href="index.php"><img src="images/logo.png" alt="Logo"></a>

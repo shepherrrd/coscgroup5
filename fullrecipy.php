@@ -44,33 +44,33 @@ $row=mysqli_fetch_array($resul);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="rating.js"></script>
 <script language="javascript" type="text/javascript">
-$(function() {
-    $("#rating_star").codexworld_rating_widget({
-        starLength: '5',
-        initialValue: '',
-        callbackFunctionName: 'processRating',
-        imageDirectory: 'images/',
-        inputAttr: 'postID'
-    });
-});
+// $(function() {
+//     $("#rating_star").codexworld_rating_widget({
+//         starLength: '5',
+//         initialValue: '',
+//         callbackFunctionName: 'processRating',
+//         imageDirectory: 'images/',
+//         inputAttr: 'postID'
+//     });
+// });
 
-function processRating(val, attrVal){
-    $.ajax({
-        type: 'POST',
-        url: 'rating.php',
-        data: 'postID='+attrVal+'&ratingPoints='+val,
-        dataType: 'json',
-        success : function(data) {
-            if (data.status == 'ok') {
-                alert('You have rated '+val+' to <?php echo $title;?>');
-                $('#avgrat').text(data.average_rating);
-                $('#totalrat').text(data.rating_number);
-            }else{
-                alert('Some problem occured, please try again.');
-            }
-        }
-    });
-}
+// function processRating(val, attrVal){
+//     $.ajax({
+//         type: 'POST',
+//         url: 'rating.php',
+//         data: 'postID='+attrVal+'&ratingPoints='+val,
+//         dataType: 'json',
+//         success : function(data) {
+//             if (data.status == 'ok') {
+//                 alert('You have rated '+val+' to ');
+//                 $('#avgrat').text(data.average_rating);
+//                 $('#totalrat').text(data.rating_number);
+//             }else{
+//                 alert('Some problem occured, please try again.');
+//             }
+//         }
+//     });
+// }
 </script>
 <style type="text/css">
     .overall-rating{font-size: 14px;margin-top: 5px;color: #8e8d8d;}
@@ -88,27 +88,7 @@ function processRating(val, attrVal){
 			<div  style="min-height:10px;width: 410px;background-color:#e6dfd1;display:inline-block;border-radius:5px;">
 			
 				<ul>
-			<!--	<input name="rating" value="0" id="rating_star" type="hidden" postID="1"  />
-								<div  style="min-height:40px;width: 200px;background-color:;float:;">
-								<p  style="display:inline-block;min-height:20px;width: 120px;background-color:;">
-								(Average Rating):
-								</p>
-								<p  style="float:right;min-height:20px;width: 50px;background-color:;margin-right:30px;">
-								<?php echo $ratingRow['average_rating']; ?>
-								</p>
-								<p  style="display:inline-block;height:20px;width: 120px;background-color:;">
-								(based on):
-								</p>
-								<p  style="float:right;min-height:20px;width: 50px;background-color:;margin-right:30px;">
-								<?php echo $ratingRow['rating_number']; ?>
-								</p>
-								</div>
-								
-					
-					
-					
-					
--->
+			
 				</ul>
 			</div>
 			<div class="header" style="margin-top:30px;">
@@ -198,55 +178,7 @@ function processRating(val, attrVal){
 				</div>
 			</div>
 		</div>
-		<!--<div>
-			<div>
-				<h3>Cooking Video</h3>
-				<a href="videos.php"><img src="images/cooking-video.png" alt="Image"></a>
-				<span>Vegetable &amp; Rice Topping</span>
-			</div>
-			<div>
-				<h3>Featured Recipes</h3>
-				<ul id="featured">
-					<li>
-						<a href="recipes.php"><img src="images/sandwich.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Ham Sandwich</a></h2>
-							<span>by: Anna</span>
-						</div>
-					</li>
-					<li>
-						<a href="recipes.php"><img src="images/biscuit-and-coffee.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Biscuit &amp; Sandwich</a></h2>
-							<span>by: Sarah</span>
-						</div>
-					</li>
-					<li>
-						<a href="recipes.php"><img src="images/pizza.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Delicious Pizza</a></h2>
-							<span>by: Rico</span>
-						</div>
-					</li>
-				</ul>
-			</div>
-			
-			<div>
-				<h3>Get Updates</h3>
-				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
-				<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
-				<a href="http://freewebsitetemplates.com/go/youtube/" target="_blank" id="youtube">Youtube</a>
-				<a href="http://freewebsitetemplates.com/go/flickr/" target="_blank" id="flickr">Flickr</a>
-				<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
-			</div>
-			<div style="display:<?php echo $none;?>;">
-				<h3>Settings</h3>
-				<a href="#"  ><?php echo $logout;?></a>
-				
-				 
-			</div>
-		</div>
-	</div>-->
+		
 	<div class="footer">
 		<div>
 			<p>
