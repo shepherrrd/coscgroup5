@@ -1,6 +1,6 @@
 <?php
 include("connection/connect.php");
-  
+$message = " ";
 
 if(isset($_POST['submit']))
 {
@@ -8,10 +8,11 @@ if(isset($_POST['submit']))
 	$lname=$_POST['lname'];
 	$email=$_POST['email'];	
 	$password=$_POST['password'];
+	
 			
 			if (empty($fname)  || empty($lname) || empty($email) ||empty($password) 
 			) {
-				echo ' Input Cannot Be Empty ';
+				$message= ' Input Cannot Be Empty ';
 				# code...
 			}else { $sql1="select * from signup where (email='$email');";
 
@@ -22,7 +23,7 @@ if(isset($_POST['submit']))
 				  $row = mysqli_fetch_assoc($res);
 				  if($email==isset($row['email']))
 				  {
-						  echo "email already exists";
+						  $message = "email already exists";
 				  }
 				  if($username==isset($row['username']))
 				  {
@@ -124,6 +125,7 @@ if(isset($_POST['submit']))
 						     	<span><label>PASSWORD</label></span>
 						    	<span><input @keydown.space.prevent type="text" value="" name='password' pattern="[A-Za-z0-9]+" onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"></span>
 						    </div>
+
 						    <script>
 							$('#submitbtn').attr('disabled', true);
 							document.getElementbyId('fname').addEventListner('keyup', e=>{
@@ -138,6 +140,7 @@ if(isset($_POST['submit']))
 						   <div>
 						   		<span><input type="submit" id="submitbtn" name='submit' value="Submit" ></span>
 						  </div>
+						  <center ><?php echo  '<div style="color:red;"> '.$message.'</div>';?></center>
 					    </form>
 						
 					</div>
@@ -145,50 +148,7 @@ if(isset($_POST['submit']))
 			</div>
 		</div>
 		
-		<!--<div>
-			<div>
-				<h3>Cooking Video</h3>
-				<a href="videos.php"><img src="images/cooking-video.png" alt="Image"></a>
-				<span>Vegetable &amp; Rice Topping</span>
-			</div>
-			<div>
-				<h3>Featured Recipes</h3>
-				<ul id="featured">
-					<li>
-						<a href="recipes.php"><img src="images/sandwich.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Ham Sandwich</a></h2>
-							<span>by: Anna</span>
-						</div>
-					</li>
-					<li>
-						<a href="recipes.php"><img src="images/biscuit-and-coffee.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Biscuit &amp; Sandwich</a></h2>
-							<span>by: Sarah</span>
-						</div>
-					</li>
-					<li>
-						<a href="recipes.php"><img src="images/pizza.jpg" alt="Image"></a>
-						<div>
-							<h2><a href="recipes.php">Delicious Pizza</a></h2>
-							<span>by: Rico</span>
-						</div>
-					</li>
-				</ul>
-			</div>
-			
-			<div>
-				<h3>Get Updates</h3>
-				<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
-				<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
-				<a href="http://freewebsitetemplates.com/go/youtube/" target="_blank" id="youtube">Youtube</a>
-				<a href="http://freewebsitetemplates.com/go/flickr/" target="_blank" id="flickr">Flickr</a>
-				<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
-			</div>
-			
-		</div>
-	</div>-->
+		
 	<div class="footer">
 		<div>
 			<p>
