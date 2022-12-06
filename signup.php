@@ -157,13 +157,7 @@ if(isset($_POST['submit']))
 				&copy;(Cosc333 Group 5) Copyright 2022. All rights reserved
 			</p>
 		</div>
-		<div style="display:<?php echo $none;?>;">
-				<h3></h3>
-				<a href="index.php" ><?php echo $logout;?></a>
-				
-				
-				 
-			</div>
+		
 	</div>
 </body>
 </html>
