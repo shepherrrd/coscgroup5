@@ -50,6 +50,17 @@ $row=mysqli_fetch_array($resul);
 	$nameingredients = "";
 	$namedirections = "";
  }
+ if ($DISC == 0) {
+	$title = "404 Page Not Found";
+	
+	$row['image'] = "noresult.jpg";
+	$nameingredients = "";
+	$namedirections = "";
+	# code...
+ }else {
+	# code...
+	
+ }
 	
 
 ?>
