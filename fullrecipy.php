@@ -12,7 +12,8 @@ $ratingRow = $result->fetch_assoc();
   $results = mysqli_query($db, $sql);
   $row = mysqli_fetch_array($results);
   $name=$row['firstname'];
-
+$nameingredients = "Ingredients";
+$namedirections = "Directions";
 
 
 
@@ -30,8 +31,26 @@ $row=mysqli_fetch_array($resul);
 	$ing_text =   $row['ing_text'];
 	$rid = 		  $row['rid'];
 	$disc = 		  $row['disc'];
- 
- 
+
+	// if (mysqli_num_rows($row) > 0) {
+				  
+	// 	$row = mysqli_fetch_assoc($resul);
+	// 	if($DISC !==isset($row['rid'])){
+	// 		$title = "404";
+	// $row['image'] = "noresult.jpg";
+	// 	} }
+ if ($DISC == isset($row)) {
+	
+	# code...
+ }else {
+	# code...
+	$title = "404 Page Not Found";
+	
+	$row['image'] = "noresult.jpg";
+	$nameingredients = "";
+	$namedirections = "";
+ }
+	
 
 ?>
 
@@ -121,7 +140,7 @@ $row=mysqli_fetch_array($resul);
 							 border-radius:5px;
 							' src='admin/img/".$row['image']."' />";
 						
-						echo	'<h5>INGREDIENTS</h5>';
+						echo	'<h5>'.$nameingredients.'</h5>';
 						
 						
 						
@@ -130,7 +149,7 @@ $row=mysqli_fetch_array($resul);
 							
 							
 							
-							echo'<h5>DIRECTIONS</h5>';
+							echo'<h5>'.$namedirections.'</h5>';
 						
 							echo		$disc;
 							
