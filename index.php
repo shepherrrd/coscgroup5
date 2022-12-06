@@ -21,7 +21,7 @@ error_reporting(0);                                                             
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Food &amp; Recipes Web Template</title>
+	<title>Food &amp; Recipes By Group 5</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -71,7 +71,17 @@ function processRating(val, attrVal){
 	</div>
 	<div  style="background-color:;margin:auto;min-height:20px;display:<?php echo $none;?>;">
 	<div  style="background-color:;margin-left:200px;width:950px;min-height:30px;">
-	<p style='float:left;color:#449c3a;margin-left:10px;font-size:20px;'>You successfully login!</p>
+	<p style='float:left;color:#449c3a;margin-left:10px;font-size:20px;' id="successlogin">You successfully login!</p>  <?php if ($_SESSION["user_id"]) {
+		echo " <script>setTimeout(() => {
+  const box = document.getElementById('successlogin');
+
+  
+  box.style.display = 'none';
+
+  
+  // box.style.visibility = 'hidden';
+}, 1000); </script>"; }?>
+	
 		<p style='float:right;color:#fff;margin-left:px;font-size:20px;'>Welcome: <span style='margin-right:0px;display:inline-block;margin-right:5px;'><?php echo $name ?></span>
 			<image src='images/user.png'  style='display:inline-block;height:20px;width:20px;margin-top:5px;margin-right:5px;'/>
 			
@@ -121,7 +131,7 @@ function processRating(val, attrVal){
 									
 									$logout= '<form action="logout.php" method="post" >
 									
-									 <i class="fa fa-sign-out" style="font-size:24px"></i><input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000;border:none;padding:5px;font-size:15px;"  >
+									 <i class="fa fa-sign-out" style="font-size:24px"></i><input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000 !important;border:none;padding:5px;font-size:15px;"  >
 									
 									
 									</form>';
@@ -163,7 +173,7 @@ function processRating(val, attrVal){
 					<li>
 						<a href="recipes.php"><img src="images/dessert.jpg" alt="Image"></a>
 						<div>
-							<h2><a href="blog.php">Dessert</a></h2>
+							<h2><a href="recipes.php">Dessert</a></h2>
 							<p>
 								5 Quick-and-Easy Dessert Recipes
 							</p>
@@ -179,7 +189,7 @@ function processRating(val, attrVal){
 					</li>
 					<li>
 						<h2><a href="featured.php">Featured Recipes</a></h2>
-						<a href="featured.php"><img src="images/featured.jpg" alt="Image"></a>
+						<a href="recipes.php"><img src="images/featured.jpg" alt="Image"></a>
 					</li>
 					
 				</ul>
@@ -251,7 +261,7 @@ function processRating(val, attrVal){
 		</div>
 		<div style="display:<?php echo $none;?>;">
 				<h3></h3>
-				<a href="index.php" ><?php echo $logout;?></a>
+				<a href="logout.php" ><?php echo $logout;?></a>
 				
 				
 				 

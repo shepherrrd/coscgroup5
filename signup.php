@@ -50,13 +50,13 @@ if(isset($_POST['submit']))
 					<li>
 						<a href="recipes.php">Recipes</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="featured.php">Recipe of Month</a>
 					</li>
 					
 					<li class="">
 						<a href="about.php">About</a>
-					</li>
+					</li> -->
 					<?php
 						if(empty($_SESSION["user_id"]))
 							{
@@ -68,7 +68,7 @@ if(isset($_POST['submit']))
 									
 									
 									
-									$logout= '<form action="login.php" method="post" >
+									$logout= '<form action="logout.php" method="post" >
 									<input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000;border:none;padding:5px;font-size:15px;"  ></form>';
 							}
 
@@ -107,7 +107,7 @@ if(isset($_POST['submit']))
 				</div>
 			</div>
 		</div>
-		<div>
+		<!--<div>
 			<div>
 				<h3>Cooking Video</h3>
 				<a href="videos.php"><img src="images/cooking-video.png" alt="Image"></a>
@@ -150,13 +150,20 @@ if(isset($_POST['submit']))
 			</div>
 			
 		</div>
-	</div>
+	</div>-->
 	<div class="footer">
 		<div>
 			<p>
-				&copy;(Navbro) Copyright 2012. All rights reserved
+				&copy;(Cosc333 Group 5) Copyright 2022. All rights reserved
 			</p>
 		</div>
+		<div style="display:<?php echo $none;?>;">
+				<h3></h3>
+				<a href="index.php" ><?php echo $logout;?></a>
+				
+				
+				 
+			</div>
 	</div>
 </body>
 </html>

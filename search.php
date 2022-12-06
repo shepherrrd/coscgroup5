@@ -103,19 +103,98 @@ if (isset($_POST["submit"])) {
 <input type="submit" name="submit">
 	
 </form>-->
-
-</body>
-</html>
-        
 <?php 
 	}
 		
 		
 		else{
-			echo "Name Does not exist";
-		}
+			echo'
+			<link rel="stylesheet" type="text/css" href="css/style.css">
+			<div class="header">
+		<div>
+			<a href="index.php"><img src="images/logo.png" alt="Logo"></a>
+		</div>
+		
+	</div>
+	<div class="body">
+		<div>
+			<div class="header">
+				<ul>
+					<li>
+						<a href="index.php">Home</a>
+					</li>
+					<li class="current">
+						<a href="recipes.php">Existing Recipes</a>
+					</li>
+					<!--<li>
+						<a href="featured.php">Recipe of Month</a>
+					</li>
+					
+					<li>
+						<a href="about.php">About</a>
+					</li>-->'; if(empty($_SESSION["user_id"]))
+					{
+						echo '<li><a href="login.php">login</a></li>';
+						echo '<li><a href="signup.php">signup</a></li>';
+					}
+				else
+					{
+							
+							
+							
+							$logout= '<form action="login.php" method="post" >
+							<input type="submit" id="logout" name="logout" value="logout" style="width:100px;color:#000;border:none;padding:5px;font-size:15px;"  ></form>';
+					};
+
+					
+						
+
+						
+			echo'		
+			</ul>
+			</div>
+			<div class="body">
+				<div id="content">
+					<div>
+						<ul>
+						
+                        <li>
+						<a href="#"><img  style=width:150px;
+	                         height:180px;
+							 margin-top:5px;
+							 margin-left:5px; 
+							 border-radius:5px;
+							 src="admin/img/noresult.jpg"></a>
+							<div><h3>OOPS!! No Results Found</h3></div>
+								
+							</li>
+						
+						
+							
+						
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>'; ?> 
+
+			
+			
+			
+			<!-- "<script> alert('No Search Results Found');
+			// window.location='index.php';
+			// </script>";
+			
+			//header("location:index.php"); -->
+		
 
 
-}
 
-?>
+
+
+</body>
+</html>
+        
+
+<?php } }?>
