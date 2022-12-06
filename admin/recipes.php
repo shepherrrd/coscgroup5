@@ -380,7 +380,7 @@ while($row = mysqli_fetch_array($result))
             </div>
             <hr>
             <footer>
-                <p>&copy; Navbro 2013</p>
+                <p>&copy; Cosc333 2022</p>
             </footer>
         </div>
        
