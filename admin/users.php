@@ -85,9 +85,9 @@ include("../connection/connect.php");
 						 <li class="active">
                             <a href="users.php"><i class="icon-chevron-right"></i>users</a>
                         </li>
-						<li>
+					<!--	<li>
                             <a href="comment.php"><i class="icon-chevron-right"></i>Comments</a>
-                        </li>
+                        </li>-->
                        
                        
                     </ul>

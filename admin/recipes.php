@@ -204,9 +204,9 @@ if(isset($_POST['submit']))           //if upload btn is pressed
 						 <li >
                             <a href="users.php"><i class="icon-chevron-right"></i>users</a>
                         </li>
-						<li>
+					<!--	<li>
                             <a href="comment.php"><i class="icon-chevron-right"></i>Comments</a>
-                        </li>
+                        </li>-->
                        
                     </ul>
                 </div>
