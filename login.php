@@ -38,6 +38,7 @@ if(isset($_POST['submit']))
 <html>
   <head>
     <title>Admin Login</title>
+    <a href="index.php">Home</a>
     <!-- Bootstrap -->
     <link href="admin/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="admin/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
